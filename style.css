@@ -21,4 +21,61 @@
     margin:0 auto;  /*수평 기준으로 중간에 오도록 left auto right auto 대신*/
     display: flex; /*아이템들의 원할한 정렬을 위해서*/
     justify-content: space-between; /*이 요소가 항상 좌우 끝으로 붙어서 출력, 크게 보면 h1과 class=nav가 들어있어 h1이 왼쪽 class=nav가 오른쪽에 붙는다.*/
+    align-items: center;/*height: 80px;인걸 기준 삼아서 요소가 중앙에 위치하게 된다.*/
 }
+
+.container .header h1 a{
+    text-decoration: none;
+    color: white;
+    font-family: abster;
+}
+
+.container .nav ul li{
+    display: inline-block; /*가로로 정렬되게*/
+    margin:0 10px; /*li 사이에 간격이 주어지게*/
+}
+
+.container .nav ul li a{/*a태그의 텍스트 데코레이션을 제거해주기 위해서*/
+    text-decoration: none; /*a 태그의 밑줄이 없어짐*/
+    color:white;
+}
+
+.container .nav ul li a:hover{
+    color: aquamarine;
+}
+
+.container .hero{
+   position: absolute; 
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%); /*이 요소가 항상 화면의 정중앙에 위치하도록, 위에서 부터 4줄*/
+   color: white;
+   text-align: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container .hero h2{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.container .hero p{
+    font-size: 20px;
+}
+
+.container .hero button{
+    background: none;
+    border: 2px solid darkseagreen;
+    color: salmon;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    outline: none;/*클릭했을 때 잔상 없애기*/
+    cursor: pointer;/*커서가 보일 수 있도록*/
+    transition: all .4s;/*입체적인 애니메이션 효과를 넣기 위해서, 천천히 배경색상이 채워짐*/
+}
+
+.container .hero button:hover{ /*배경 색상이 변하게 하기 위해서*/
+    background-color: darkslategray;
+}
+
