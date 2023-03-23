@@ -1,0 +1,24 @@
+@font-face {
+    font-family: abster;
+    src: url(font/abster-webfont.woff) format('woff');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+     height: 100vh; /* height는 100%라고 하면 100%를 가지지 못함 이는 %가 가지고 있는 문제점 */
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(images/room.jpg)  /*검은색 불투명도를 넣어줌*/
+}
+
+.container .header{
+    width: 80%; /*전체에서 80%를 차지*/
+    height: 80px;
+    margin:0 auto;  /*수평 기준으로 중간에 오도록 left auto right auto 대신*/
+    display: flex; /*아이템들의 원할한 정렬을 위해서*/
+    justify-content: space-between; /*이 요소가 항상 좌우 끝으로 붙어서 출력, 크게 보면 h1과 class=nav가 들어있어 h1이 왼쪽 class=nav가 오른쪽에 붙는다.*/
+}
